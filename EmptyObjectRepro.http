@@ -1,0 +1,6 @@
+@EmptyObjectRepro_HostAddress = http://localhost:5240
+
+GET {{EmptyObjectRepro_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
