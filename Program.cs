@@ -11,6 +11,7 @@ var app = builder.Build();
 
 app.UseFastEndpoints(c =>
 {
-    c.Serializer.Options.TypeInfoResolver = ApiJsonSerializerContext.Default;
+    c.Serializer.CharacterEncoding = null;
+    c.Serializer.Options.TypeInfoResolverChain.Add(ApiJsonSerializerContext.Default);
 });
 app.Run();
